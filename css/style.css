@@ -1,0 +1,133 @@
+@import url("reset.css");
+/* mobile first */
+:root{
+    --white:white;
+}
+html{
+    font-size: 10px;
+}
+.top{
+    background-color: rgba(43, 41, 41, 0.457);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    z-index: 1;
+    letter-spacing: .5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top a{
+    text-decoration: none;
+}
+ 
+.top .material-icons{
+    flex-basis: 50%;
+    font-size: 4rem;
+    text-align: right;
+    cursor: pointer;
+    color: azure;
+}
+.logo{
+    flex-basis: 50%;
+    text-transform: uppercase;
+    padding-left: 2rem;
+    border-left: .5rem solid rgb(152, 89, 147);
+    margin: 2rem;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 3rem;
+    color: var(--white);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/img/header.webp') center/cover fixed;
+}
+
+nav{
+    display:none;
+}
+nav .material-icons{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 3;
+    font-size: 4rem;
+    cursor: pointer;
+    color: azure;
+}
+nav ul{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 2;
+}
+
+nav li{
+    flex-basis: 15%;
+    width: 100%;
+    font-size: 2rem;
+}
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: var(--white);
+}
+.nav-display-block{
+    display: block;
+}
+
+header video{
+    display: none;
+}
+section, header{
+    height: 100vh;
+}
+
+section:nth-child(odd){
+    background-color: rgb(247, 214, 252);
+}
+
+
+/* destop */
+@media screen and (min-width: 800px)  {
+    
+header {
+    position: relative;
+    overflow: hidden;
+}   
+
+header video{
+    display: block;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+ul a:hover{
+    background-color: rgba(137, 43, 226, 0.294);
+    transition-duration: .2s;
+}
+
+}
